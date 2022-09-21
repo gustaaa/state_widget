@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:statefull_widget/widget/Convert.dart';
+import 'package:statefull_widget/widget/Input.dart';
+import 'package:statefull_widget/widget/Result.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,62 +49,22 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'Masukkan Angka Dalam Celcius',
-                  labelText: 'Masukkan Angka Dalam Celcius',
-                ),
-                controller: etInput,
-                keyboardType: TextInputType.number,
-                // inputFormatters: <TextInputFormatter>[
-                //   FilteringTextInputFormatter.digitsOnly
-                // ],
-              ),
+              Input(etInput: etInput),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Column(
-                    children: [
-                      Text(
-                        "Suhu dalam Kelvin",
-                        style: TextStyle(fontSize: 15),
-                      ),
-                      Padding(padding: EdgeInsets.all(10)),
-                      Text(
-                        '$kelvin',
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    ],
+                  Result(
+                    result: kelvin,
+                    title: 'Suhu dalam Kelvin',
                   ),
-                  Column(
-                    children: [
-                      Text(
-                        "Suhu dalam Reamor",
-                        style: TextStyle(fontSize: 15),
-                      ),
-                      Padding(padding: EdgeInsets.all(10)),
-                      Text(
-                        '$reamor',
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    ],
+                  Result(
+                    result: reamor,
+                    title: 'Suhu dalam Reamor',
                   ),
                 ],
               ),
-              Container(
-                width: double.infinity,
-                height: 50,
-                child: TextButton(
-                  style:
-                      TextButton.styleFrom(backgroundColor: Colors.lightBlue),
-                  onPressed: konversi,
-                  child: Text(
-                    "Konversi Suhu",
-                    style: TextStyle(
-                      color: Color(0xffffffff),
-                    ),
-                  ),
-                ),
+              Convert(
+                konversi: konversi,
               ),
             ],
           ),
