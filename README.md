@@ -1,16 +1,10 @@
-# statefull_widget
+# state_widget
 
-A new Flutter project.
+Nama : Gustania Nirmala Meisi
 
-## Getting Started
+NIM : 2041720107
 
-This project is a starting point for a Flutter application.
+Konversi Desain Ke StatelessWidget
 
-A few resources to get you started if this is your first Flutter project:
+![stateless_widget](https://user-images.githubusercontent.com/79148372/191494435-005c30ac-17fa-4d81-abb1-e177ac4ac799.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
